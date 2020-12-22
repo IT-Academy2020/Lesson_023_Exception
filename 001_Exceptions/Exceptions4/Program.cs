@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Text;
 
 // Обробка винятків.
 
@@ -9,6 +10,8 @@ namespace Exceptions
     {
         public void MyMethod()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             Exception exception = new Exception("Моє виключення");
 
             exception.HelpLink = "http://MyCompany.com/ErrorService";
@@ -23,6 +26,8 @@ namespace Exceptions
     {
         static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             try
             {
                 MyClass instance = new MyClass();

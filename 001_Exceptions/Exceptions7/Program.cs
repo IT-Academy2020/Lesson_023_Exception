@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 // Обробка винятків.
 
@@ -8,13 +9,15 @@ namespace Exceptions
     {
         static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             int a = 1, n = 2;
 
             try
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Спроба ділення на нуль.");
-                Console.WriteLine("a / (2 - n) = {0}", a / (2 - n));
+                //Console.WriteLine("a / (2 - n) = {0}", a / (2 - n));
             }
             catch (Exception e)
             {

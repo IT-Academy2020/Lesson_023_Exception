@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 // Обробка винятків.
 
@@ -8,6 +9,8 @@ namespace Exceptions
     {
         static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             int a = 1, n = 2;
 
             try

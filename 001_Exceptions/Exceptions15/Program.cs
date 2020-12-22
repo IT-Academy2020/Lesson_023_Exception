@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 // Обробка винятків. (Порядок обробки виключень)
 
@@ -6,16 +7,14 @@ namespace Exceptions
 {
     class MyExceptionA : Exception
     {
-        public MyExceptionA(string message)
-            : Base(message)
+        public MyExceptionA(string message) : base(message)
         {
         }
     }
 
     class MyExceptionB : MyExceptionA
     {
-        public MyExceptionB(string message)
-            : Base(message)
+        public MyExceptionB(string message) : base(message)
         {
         }
     }
@@ -24,6 +23,8 @@ namespace Exceptions
     {
         static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             try
             {
                 // throw new Exception ( "Exception");

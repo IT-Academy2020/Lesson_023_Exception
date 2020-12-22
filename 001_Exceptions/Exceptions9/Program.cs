@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 // Обробка внутрішніх винятків.
 
@@ -28,6 +29,8 @@ namespace Exceptions
     {
         static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             ClassWithException instance = new ClassWithException();
             //instance.CatchInner (); // Спробувати викликати.
             try

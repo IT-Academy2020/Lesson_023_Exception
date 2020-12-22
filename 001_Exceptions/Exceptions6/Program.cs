@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 // Обробка винятків.
 
@@ -18,6 +19,8 @@ namespace Exceptions
     {
         static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             try
             {
                 throw new UserException();
@@ -29,7 +32,7 @@ namespace Exceptions
 
                 try
                 {
-                    FileStream fs = File.Open(@ "C: \ NonExistentFile.log", FileMode.Open);
+                    FileStream fs = File.Open(@"C: \ NonExistentFile.log", FileMode.Open);
                 }
                 catch (Exception exception)
                 {
